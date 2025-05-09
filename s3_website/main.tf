@@ -14,7 +14,7 @@ provider "aws" {
 
 # Creating bucket
 resource "aws_s3_bucket" "website" {
-  bucket = "jenkins-bucket-sokolvlad140903"
+  bucket = "my-buck-sokol-vlad4397778922"
 
   tags = {
     Name        = "Website"
