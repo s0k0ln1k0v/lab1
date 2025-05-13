@@ -4,7 +4,7 @@ Description: Deploy a single-instance WordPress website with EC2 and RDS
 Parameters:
   KeyName:
     Description: Name of an existing EC2 KeyPair for SSH access
-    Type: AWS::EC2::KeyPair::KeyName
+    Type: AWS::EC2::KeyPair::lab_vockey
 
   InstanceType:
     Description: EC2 instance type
