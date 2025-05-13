@@ -4,7 +4,8 @@ Description: Deploy a single-instance WordPress website with EC2 and RDS
 Parameters:
   KeyName:
     Description: Name of an existing EC2 KeyPair for SSH access
-    Type: AWS::EC2::KeyPair::lab_vockey
+    Type: AWS::EC2::KeyPair::KeyName
+    Default: lab_vockey  # Вказуємо ім'я існуючого ключа для доступу по SSH
 
   InstanceType:
     Description: EC2 instance type
@@ -70,7 +71,7 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       InstanceType: !Ref InstanceType
-      KeyName: !Ref KeyName
+      KeyName: !Ref KeyName  # Використовуємо ім'я ключа, передане через параметри
       SecurityGroups:
         - !Ref WebServerSecurityGroup
       ImageId: ami-0c55b159cbfafe1f0  # Amazon Linux 2 AMI in us-east-1
