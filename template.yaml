@@ -35,6 +35,7 @@ Parameters:
     MaxLength: 16
     AllowedPattern: '[a-zA-Z][a-zA-Z0-9]*'
     ConstraintDescription: must begin with a letter and contain only alphanumeric characters.
+    Default: admin
 
   DBPassword:
     NoEcho: true
@@ -44,6 +45,7 @@ Parameters:
     MaxLength: 41
     AllowedPattern: '^[a-zA-Z0-9]*$'
     ConstraintDescription: must contain only alphanumeric characters.
+    Default: password123
 
   DBAllocatedStorage:
     Default: 20
